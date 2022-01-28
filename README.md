@@ -1,2 +1,2 @@
 # Safak-Sayar
-php ile askerdeyken yaptığım bir basit şafak sayar
+php ile askerdeyken telefonda yazdığım bir basit şafak sayar
