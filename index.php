@@ -57,6 +57,6 @@ echo "GEÇEN GÜN: ".$gecen_gun_format. "<br>";
 echo "ŞAFAK: ".$safak." / ".$safak_sehir."<br>";
 echo "ATARSA: ".$atarsa." / ".$atarsa_sehir."<br>";
 echo "PLAKA: ".$plaka."<br>";
-if($memlekete_kalan_gun_format > 0) {
+if(strtotime($bugun) < strtotime($memleket_tarihi)) {
 	echo "MEMLEKETE KALDI: ".($memlekete_kalan_gun_format)." GÜN / ".$memleket_tarihi;
 }
