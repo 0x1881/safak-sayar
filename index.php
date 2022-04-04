@@ -31,6 +31,7 @@ $tarih1 = new DateTime($sevk_tarihi);
 $tarih2 = new DateTime($bugun);
 $tarih3 = new DateTime($resmi_terhis);
 $tarih4 = new DateTime($memleket_tarihi);
+$tarih5 = new DateTime($tmi_terhis);
 
 $gecen_gun = $tarih1->diff($tarih2);
 $gecen_gun_format = intval($gecen_gun->format('%a'));
@@ -40,6 +41,12 @@ $kalan_gun_format = intval($kalan_gun->format('%a'));
 
 $memlekete_kalan_gun = $tarih2->diff($tarih4);
 $memlekete_kalan_gun_format = (intval($memlekete_kalan_gun->format('%a')) - $ceza);
+
+$toplam_gun_tmisiz = $tarih1->diff($tarih3);
+$toplam_gun_tmisiz_format = intval($toplam_gun_tmisiz->format('%a'));
+
+$toplam_gun_tmi = $tarih1->diff($tarih5);
+$toplam_gun_tmili_format = intval($toplam_gun_tmi->format('%a'));
 
 $safak = ($kalan_gun_format-$toplam_izin);
 $atarsa = (($kalan_gun_format-$toplam_izin)-1);
@@ -53,6 +60,8 @@ echo "RESMİ TERHİS TARİHİ: ".$resmi_terhis."<br>";
 echo "TMİ TERHİS TARİHİ: ".$tmi_terhis."<br>";
 echo "CEZA: ".$ceza."<br>";
 echo "TUTANAK: ".$tutanak."<br>";
+echo "TOPLAM TMİ ÇIKARILMAMIŞ GÜN: ".$toplam_gun_tmisiz_format. "<br>";
+echo "TOPLAM TMİ ÇIKARILMIŞ GÜN: ".$toplam_gun_tmili_format. "<br>";
 echo "GEÇEN GÜN: ".$gecen_gun_format. "<br>";
 echo "ŞAFAK: ".$safak." / ".$safak_sehir."<br>";
 echo "ATARSA: ".$atarsa." / ".$atarsa_sehir."<br>";
