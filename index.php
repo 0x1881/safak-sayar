@@ -52,7 +52,10 @@ $safak = ($kalan_gun_format-$toplam_izin);
 $atarsa = (($kalan_gun_format-$toplam_izin)-1);
 $safak_sehir = trupper($sehirler[($safak-1)]);
 $atarsa_sehir = trupper($sehirler[($atarsa-1)]);
-
+if ($atarsa === 0) {
+	echo "ŞAFAK BİTTİ!";
+	exit;
+}
 echo "SEVK TARİHİ: ".$sevk_tarihi."<br>";
 echo "RESMİ KATILIŞ TARİHİ: ".$resmi_katilis_tarihi."<br>";
 echo "GERÇEK KATILIŞ TARİHİ: ".$gercek_katilis_tarihi."<br>";
