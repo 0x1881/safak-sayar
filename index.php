@@ -64,4 +64,4 @@ if(strtotime($bugun) < strtotime($memleket_tarihi)) {
 	echo "MEMLEKETE KALDI: ".($memlekete_kalan_gun_format)." GÜN / ".$memleket_tarihi;
 }
 echo "<br>SAAT FARKI İLE GERİ SAYIM:<br>";
-include 'safakjs.html';
+include 'safakjs.php';
