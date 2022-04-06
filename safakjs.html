@@ -43,7 +43,7 @@
 </div>
 
 <script>
-var countDownDate = new Date("2022/04/18 08:00").getTime(); //geri sayılacak ileri zamanki bir tarihi milisaniye cinsinden elde ediyoruz
+var countDownDate = new Date("<?php echo str_replace("-", "/", $tmi_terhis); ?> 08:00:00").getTime(); //geri sayılacak ileri zamanki bir tarihi milisaniye cinsinden elde ediyoruz
 var dayText	= "Gun";
 var hourText	= "Saat";
 var minuteText	= "Dakika";
