@@ -11,8 +11,8 @@ $kullanilmayan_izin = 6;
 $toplam_izin = ($yol_izin + $kullanilmayan_izin) - $ceza;
 
 $sevk_tarihi = "2021-10-26";
-$resmi_katilis_tarihi = "2021-12-29";
-$gercek_katilis_tarihi = "2021-12-28";
+$resmi_katilis_tarihi = "2021-10-29";
+$gercek_katilis_tarihi = "2021-10-28";
 $bugun = date('Y-m-d');
 $resmi_terhis = date('Y-m-d', strtotime($sevk_tarihi. ' + 6 months'));
 $tmi_terhis = date('Y-m-d', strtotime($resmi_terhis. ' - '.$toplam_izin.' days'));
@@ -63,5 +63,5 @@ echo "PLAKA: ".$plaka."<br>";
 if(strtotime($bugun) < strtotime($memleket_tarihi)) {
 	echo "MEMLEKETE KALDI: ".($memlekete_kalan_gun_format)." GÜN / ".$memleket_tarihi;
 }
-echo "<br>SAAT FARKI İLE GERİ SAYIM: $tmi_terhis 08:00:00 <br>";
+echo "<br>SAAT FARKI İLE GERİ SAYIM: $tmi_terhis 08:00:00<br>";
 include 'safakjs.php';
