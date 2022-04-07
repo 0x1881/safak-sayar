@@ -7,7 +7,6 @@ $ceza = 0;
 $tutanak = 0;
 $yol_izin = 2;
 $kullanilmayan_izin = 6;
-$toplam_izin = ($yol_izin + $kullanilmayan_izin) - $ceza;
 
 $plaka = 33;
 $sevk_tarihi = "2021-10-26";
@@ -39,6 +38,7 @@ exit;
 } 
 }
 
+$toplam_izin = ($yol_izin + $kullanilmayan_izin) - $ceza;
 $resmi_katilis_tarihi = "2021-10-29";
 $gercek_katilis_tarihi = "2021-10-28";
 $bugun = date('Y-m-d');
