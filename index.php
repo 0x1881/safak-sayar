@@ -48,8 +48,8 @@ if ($atarsa === 0) {
 	exit;
 }
 echo "SEVK TARİHİ: ".$sevk_tarihi."<br>";
-echo "RESMİ KATILIŞ TARİHİ: ".$resmi_katilis_tarihi."<br>";
-echo "GERÇEK KATILIŞ TARİHİ: ".$gercek_katilis_tarihi."<br>";
+//echo "RESMİ KATILIŞ TARİHİ: ".$resmi_katilis_tarihi."<br>";
+//echo "GERÇEK KATILIŞ TARİHİ: ".$gercek_katilis_tarihi."<br>";
 echo "RESMİ TERHİS TARİHİ: ".$resmi_terhis."<br>";
 echo "TMİ TERHİS TARİHİ: ".$tmi_terhis."<br>";
 echo "CEZA: ".$ceza."<br>";
