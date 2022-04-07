@@ -5,24 +5,31 @@ date_default_timezone_set("Europe/Istanbul");
 $sehirler=["ADANA","ADIYAMAN","AFYON","AĞRI","AMASYA","ANKARA","ANTALYA","ARTVİN","AYDIN","BALIKESİR","BİLECİK","BİNGÖL","BİTLİS","BOLU","BURDUR","BURSA","ÇANAKKALE","ÇANKIRI","ÇORUM","DENİZLİ","DİYARBAKIR","EDİRNE","ELAZIĞ","ERZİNCAN","ERZURUM","ESKİŞEHİR","GAZİANTEP","GİRESUN","GÜMÜŞHANE","HAKKARİ","HATAY","ISPARTA","İÇEL (MERSİN)","İSTANBUL","İZMİR","KARS","KASTAMONU","KAYSERİ","KIRKLARELİ","KIRŞEHİR","KOCAELİ","KONYA","KÜTAHYA","MALATYA","MANİSA","KAHRAMANMARAŞ","MARDİN","MUĞLA","MUŞ","NEVŞEHİR","NİĞDE","ORDU","RİZE","SAKARYA","SAMSUN","SİİRT","SİNOP","SİVAS","TEKİRDAĞ","TOKAT","TRABZON","TUNCELİ","ŞANLIURFA","UŞAK","VAN","YOZGAT","ZONGULDAK","AKSARAY","BAYBURT","KARAMAN","KIRIKKALE","BATMAN","ŞIRNAK","BARTIN","ARDAHAN","IĞDIR","YALOVA","KARABÜK","KİLİS","OSMANİYE","DÜZCE"];
 $ceza = 0;
 $tutanak = 0;
-$plaka = 33;
 $yol_izin = 2;
 $kullanilmayan_izin = 6;
 $toplam_izin = ($yol_izin + $kullanilmayan_izin) - $ceza;
 
+$plaka = 33;
 $sevk_tarihi = "2021-10-26";
 
 if(isset($_GET["sevk_tarihi"])) {
-
 if (preg_match("/\d{4}\-\d{2}-\d{2}/", $_GET["sevk_tarihi"])) {
     $sevk_tarihi = $_GET["sevk_tarihi"];
 } else {
     echo 'girilen tarih yanlis';
 exit;
+} 
 }
 
-  
+if(isset($_GET["plaka"])) {
+if (preg_match("/\d{2}/", $_GET["plaka"])) {
+    $plaka= $_GET["plaka"];
+} else {
+    echo 'girilen plaka yanlis, 01 ya da 34 ornek';
+exit;
+} 
 }
+
 $resmi_katilis_tarihi = "2021-10-29";
 $gercek_katilis_tarihi = "2021-10-28";
 $bugun = date('Y-m-d');
