@@ -11,6 +11,17 @@ $kullanilmayan_izin = 6;
 $toplam_izin = ($yol_izin + $kullanilmayan_izin) - $ceza;
 
 $sevk_tarihi = "2021-10-26";
+
+if(isset($_GET["sevk_tarihi"])) {
+
+if (preg_match("/\d{4}\-\d{2}-\d{2}/", $_GET["sevk_tarihi"])) {
+    $sevk_tarihi = $_GET["sevk_tarihi"];
+} else {
+    echo 'girilen tarih yanlis';
+}
+
+  
+}
 $resmi_katilis_tarihi = "2021-10-29";
 $gercek_katilis_tarihi = "2021-10-28";
 $bugun = date('Y-m-d');
