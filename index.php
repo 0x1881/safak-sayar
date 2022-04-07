@@ -30,6 +30,15 @@ exit;
 } 
 }
 
+if(isset($_GET["yol_izni"])) {
+if (preg_match("/\d{1}/", $_GET["yol_izni"])) {
+    $yol_izin = $_GET["yol_izni"];
+} else {
+    echo 'girilen yol izni yanlis';
+exit;
+} 
+}
+
 $resmi_katilis_tarihi = "2021-10-29";
 $gercek_katilis_tarihi = "2021-10-28";
 $bugun = date('Y-m-d');
