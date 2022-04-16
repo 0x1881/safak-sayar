@@ -71,7 +71,7 @@ $safak = ($kalan_gun_format-$toplam_izin);
 $atarsa = (($kalan_gun_format-$toplam_izin)-1);
 $safak_sehir = $sehirler[($safak-1)];
 $atarsa_sehir = $sehirler[($atarsa-1)];
-if ($atarsa === 0) {
+if (date("Y-m-d H:i:s") >= $tmi_terhis." 08:00:00") {
 	echo "ŞAFAK BİTTİ!";
 	exit;
 }
